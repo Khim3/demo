@@ -1,7 +1,4 @@
 package chicken.invaders.demo;
-
-import javafx.scene.image.ImageView;
-
 public class Plane extends Item {
     private int score;
     private GamePane pane;
@@ -17,20 +14,21 @@ public class Plane extends Item {
     }
 
     public void moveLeft() {
-        setX(getX() - 10);
+        setX(getX() - 18);
     }
 
     public void moveRight() {
-        setX(getX() + 10);
+        setX(getX() + 18);
     }
 
     public void moveUp() {
-        setY(getY() - 10);
+        setY(getY() - 18);
     }
 
     public void moveDown() {
-        setY(getY() + 10);
+        setY(getY() + 18 );
     }
+
 
     public int getScore() {
         return this.score;
@@ -41,23 +39,18 @@ public class Plane extends Item {
     }
 
     public void updateScore() {
-        score++;
+        score += 5;
     }
 
     public void die() {
         if (alive && !winner) {
             shape.setVisible(false);
             alive = false;
-            //ImageView img = new ImageView("file:images/game-over.png");
-            //pane.getChildren().add(img);
-            // call gameOver()
             pane.gameOver();
         }
     }
     public void win() {
         winner = true;
-        //ImageView img = new ImageView("file:images/win.png");
-        //pane.getChildren().add(img);
         pane.gameOver();
     }
 }

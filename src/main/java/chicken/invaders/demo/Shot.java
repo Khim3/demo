@@ -16,7 +16,7 @@ public class Shot extends Item {
 
         // start move
         Timeline animation = new Timeline();
-        KeyFrame frame = new KeyFrame(Duration.millis(30), e -> {
+        KeyFrame frame = new KeyFrame(Duration.millis(15), e -> {
             if (currentColumn != -1) {
                 Chicken temp = pane.getLastChicken(currentColumn);
                 currentChicken = temp;

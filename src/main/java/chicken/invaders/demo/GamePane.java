@@ -11,14 +11,14 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
 public class GamePane extends Pane {
-    private Text scoreText;
+    private final Text scoreText;
     Chicken[][] chickens;
     Plane plane;
-
     GamePane() {
         // show plane
         this.plane = new Plane(505,550,this);
         this.getChildren().add(this.plane.getShape());
+
         //show chickens
         chickens = new Chicken[10][4];
         for (int i = 0; i < 10; i++) {
@@ -85,7 +85,7 @@ public class GamePane extends Pane {
     }
 
     public void gameOver() {
-       // show alert
+        // show alert
         Alert alert = new Alert(AlertType.INFORMATION);
         alert.setTitle("Game Over");
         alert.setHeaderText(null);

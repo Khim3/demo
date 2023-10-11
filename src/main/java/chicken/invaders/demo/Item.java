@@ -1,7 +1,5 @@
 package chicken.invaders.demo;
 
-
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class Item {
@@ -38,4 +36,3 @@ public class Item {
     }
 
 }
-
